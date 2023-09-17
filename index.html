@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="titlediv">
+
+</div>
+<div id="main">
+    <script src="dexScript.js"></script>
+    <div id="form-ball">
+        <h1>Pokedex</h1>
+        <img id="pokeball" src="assets/pokeball_528101.png">
+        <label>
+            <form onsubmit="handleFormSubmit(event)">
+                <input type="text" id="pokemonName" placeholder="Enter Pokémon name">
+                <button type="submit">Submit</button>
+            </form>
+        </label>
+        <button id="showAll" onclick="showAll()" >Show All</button>
+        <button id="reset" onclick="clear1('pokemonInfo')" >Clear</button>
+
+
+    </div>
+    <div id="pokemonInfo"></div>
+
+
+</div>
+<script>
+    window.embeddedChatbotConfig = {
+        chatbotId: "nVNBsqr4ljnNVBIpYQTQy",
+        domain: "www.chatbase.co"
+    }
+</script>
+<script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="nVNBsqr4ljnNVBIpYQTQy"
+        domain="www.chatbase.co"
+        defer>
+</script>
+
+</body>
+</html>
