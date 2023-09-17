@@ -7,6 +7,72 @@
     }
 }
 
+/* Default styles for larger screens */
+body {
+    font-family: 'Josefin Sans';
+    display: grid;
+    place-items: center;
+}
+
+#main {
+    display: flex;
+}
+
+/* Add media query for screens smaller than 768px (typical phone screens) */
+@media (max-width: 900px) {
+    /* Adjust styles for smaller screens */
+
+    /* Center the form-ball on smaller screens */
+    #form-ball {
+        width: 100%;
+        max-width: none;
+        position: static;
+        transform: none;
+    }
+
+    /* Make the input field and button full width */
+    input, button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px; /* Increase font size for readability */
+    }
+
+    /* Adjust padding and margin for pokeDiv and pokedex-container */
+    .pokeDiv, .pokedex-container {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    /* Center-align the text in the titlediv */
+    .titlediv {
+        text-align: center;
+    }
+
+    /* Adjust margin for #pokemonInfo */
+    #pokemonInfo {
+        margin-left: 0;
+    }
+
+    /* Make the sprite image smaller on smaller screens */
+    .sprite {
+        width: 100px;
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Adjust padding for stats-bar */
+    .stats-bar {
+        padding: 5px;
+    }
+
+    /* Increase font size for h2, h3, and p on smaller screens */
+    h2, h3, p {
+        font-size: 18px;
+    }
+}
+
+
 .fade-in {
     animation: fadeIn 1s ease-in-out;
 }
