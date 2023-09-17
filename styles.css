@@ -9,7 +9,7 @@
 
 /* Default styles for larger screens */
 body {
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', sans-serif;
     display: grid;
     place-items: center;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 body{
-    font-family: 'Josefin Sans';
+    font-family: 'Josefin Sans', sans-serif;
     display: grid;
     place-items: center;
 
