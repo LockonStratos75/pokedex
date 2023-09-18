@@ -7,11 +7,11 @@
     }
 }
 @media screen and (max-width: 1080px) {
-    #form-ball {
-        /*font-size: 20px;*/
-        width: 150px !important;
+    /*#form-ball {*/
+    /*    !*font-size: 20px;*!*/
+    /*    width: 150px !important;*/
 
-    }
+    /*}*/
     #pokemonName{
         width: 95px;
     }
