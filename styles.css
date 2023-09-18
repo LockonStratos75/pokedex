@@ -6,32 +6,6 @@
         opacity: 1;
     }
 }
-@media screen and (max-width: 1080px) {
-    /*#form-ball {*/
-    /*    !*font-size: 20px;*!*/
-    /*    width: 255px !important;*/
-
-
-    /*}*/
-    /*#pokemonName{*/
-    /*    width: 150px;*/
-    /*    height: 35px;*/
-    /*    margin: 20px 20px;*/
-    /*}*/
-    /*#reset{*/
-    /*    margin-bottom: 50px;*/
-    /*    font-size: 18px;*/
-    /*}*/
-    /*button{*/
-    /*    font-size: 18px !important;*/
-    /*    height: 60px;*/
-    /*}*/
-
-}
-
-
-
-
 
 .fade-in {
     animation: fadeIn 1s ease-in-out;
