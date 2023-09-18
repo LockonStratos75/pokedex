@@ -11,11 +11,20 @@
         /*font-size: 20px;*/
         width: 150px !important;
 
-
     }
     #pokemonName{
         width: 95px;
     }
+    .pokeDiv {
+        margin: 0;
+        padding: 0 ;
+        width: 150px !important;
+        font-size: 12px;
+    }
+    .sprite{
+        width: 100px !important;
+    }
+
 }
 
 
