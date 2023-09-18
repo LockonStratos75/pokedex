@@ -85,31 +85,21 @@ function clickDiv(pokemon) {
     window.location.href = `details.html?pokemon=${pokeName}`;
 }
 
-// function showAll() {
-//     clear1('pokemonInfo');
-//     for (let i = 1; i <= 1008; i++) {
-//         fetchPoke(i);
-//     }
-// }
 
 async function showAll() {
     clear1('pokemonInfo');
-    const promises = [];
+    const pokemonData = [];
 
     for (let i = 1; i <= 1008; i++) {
-        promises.push(fetchPoke(i));
+        const data = await fetchPoke(i);
+        pokemonData.push(data);
     }
 
-    try {
-        await Promise.all(promises);
-        // All Pokemon data fetched successfully
-        console.log("All Pokemon data loaded successfully!");
-    } catch (error) {
-        console.error("Error loading Pokemon data:", error);
-        displayErrorMessage();
-    }
+    // Now, pokemonData contains the data for all Pokémon in the correct order.
+    console.log("All Pokemon data loaded successfully!");
+
+    // You can display the data or perform other operations here.
+    // For example, if you want to display the data:
+    displayPokemonData(pokemonData);
 }
 
-
-// // Call showAll() to fetch and display all Pokemon
-// showAll();
