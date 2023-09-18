@@ -9,7 +9,8 @@ function clear1(divToClear) {
 
 function handleFormSubmit(event) {
     event.preventDefault();
-    const pokemonNameInput = document.getElementById('pokemonName').value;
+    const input = document.getElementById('pokemonName').value;
+    const pokemonNameInput = input.toLowerCase();
     fetchPoke(pokemonNameInput);
 }
 
