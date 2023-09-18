@@ -47,6 +47,15 @@ if (pokeName) {
                             longestFlavorEntry = flavorText;
                         }
                     });
+                    // Create the meta tag element
+                    var meta = document.createElement('meta');
+
+// Set the attributes for the meta tag
+                    meta.setAttribute('name', 'viewport');
+                    meta.setAttribute('content', 'width=device-width, initial-scale=1.0');
+
+// Append the meta tag to the head element
+                    document.head.appendChild(meta);
 
                     // Get the longest flavor text entry
                     const description = longestFlavorEntry;
