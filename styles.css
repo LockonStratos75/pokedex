@@ -9,13 +9,16 @@
 @media screen and (max-width: 900px) {
     #form-ball {
         font-size: 20px;
-        width: 300px !important;
+        width: 250px !important;
+        position: fixed !important;
+
+
     }
     #pokeball {
         width: 100px !important;
     }
     #pokemonName{
-        width: 250px !important;
+        width: 200px !important;
         height: 25px;
         margin: 20px 20px;
     }
