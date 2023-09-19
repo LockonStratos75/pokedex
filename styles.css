@@ -8,17 +8,43 @@
 }
 @media screen and (max-width: 1080px) {
     #form-ball {
-        width: 230px !important;
+        width: 90vw !important;
+        height: 50px !important;
+        position: fixed !important;
+        top: 50px!important;
+        left: 0;
+        display: flex !important;
+        font-size: 10px !important;
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+
+    ;
 
     }
+    button{
+        width: 100px!important;
+        margin: 5px;
+    }
+    #pokeball{
+        width: 50px !important;
+    }
+    form{
+        font-size: 10px !important;
+        display: flex !important;
+        margin: 10px;
+    }
+    #pokemonInfo{
+        /*position: relative;*/
+        margin-top: 8rem;
+        margin-right: 20rem;
+    }
     .pokeDiv {
-        margin: 0;
         padding: 0 ;
-        width: 150px !important;
         font-size: 12px;
     }
     .sprite{
-        width: 100px !important;
+        width: 170px !important;
     }
 
 }
