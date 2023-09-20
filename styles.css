@@ -7,8 +7,7 @@
     }
 }
 @media screen and (max-width: 1080px) {
-    #form-ball {
-        width: 90vw !important;
+    #form-ball{
         height: 50px !important;
         position: fixed !important;
         top: 50px!important;
@@ -18,8 +17,6 @@
         background-color: white;
         align-items: center;
         justify-content: center;
-
-    ;
 
     }
     button{
