@@ -52,7 +52,7 @@ if (pokeName) {
 
 // Set the attributes for the meta tag
                     meta.setAttribute('name', 'viewport');
-                    meta.setAttribute('content', 'width=device-width, initial-scale=0.75');
+                    meta.setAttribute('content', 'width=device-width, initial-scale=1.0');
 
 // Append the meta tag to the head element
                     document.head.appendChild(meta);
