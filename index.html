@@ -21,11 +21,11 @@
         <label>
             <form onsubmit="handleFormSubmit(event)">
                 <input type="text" id="pokemonName" placeholder="Enter Pokémon name">
-                <button id="submit" type="submit"><span>Submit</span></button>
+                <button class="btn" id="submit" type="submit"><span>Submit</span></button>
             </form>
         </label>
         <button id="showAll" onclick="showAll()" >Show All</button>
-        <button id="reset" onclick="clear1('pokemonInfo')" >Clear</button>
+        <button id="reset" onclick="window.location.reload()" >Clear</button>
 
 
     </div>
@@ -45,6 +45,8 @@
         domain="www.chatbase.co"
         defer>
 </script>
+
+
 
 </body>
 </html>

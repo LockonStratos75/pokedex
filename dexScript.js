@@ -5,6 +5,7 @@ function clear1(divToClear) {
     while (pokemonInfoContainer.firstChild) {
         pokemonInfoContainer.removeChild(pokemonInfoContainer.firstChild);
     }
+
 }
 
 function handleFormSubmit(event) {
