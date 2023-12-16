@@ -6,93 +6,107 @@
         opacity: 1;
     }
 }
-/*@media screen and (max-width: 900px) {*/
-/*    #form-ball {*/
-/*        width: 89vw!important;*/
-/*        height: 20px !important;*/
-/*        position: fixed !important;*/
-/*        top: 30px!important;*/
-/*        left: 0;*/
-/*        display: flex !important;*/
-/*        align-items: center;*/
-/*        justify-content: center;*/
-/*        font-size: 10px !important;*/
-/*        background-color: ghostwhite;*/
-/*        border: none!important;*/
-/*        box-shadow: 0 0!important;*/
+@media screen and (max-width: 900px) {
+    #form-ball {
+        width: 89vw!important;
+        height: 20px !important;
+        position: fixed !important;
+        top: 30px!important;
+        left: 0;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px !important;
+        background-color: ghostwhite;
+        border: none!important;
+        box-shadow: 0 0!important;
 
-/*    }*/
+    }
 
-/*    #form-ball h1{*/
-/*        display: none;*/
-/*    }*/
+    #form-ball h1{
+        display: none;
+    }
 
-/*    button{*/
-/*        width: 100px!important;*/
-/*        margin: 5px;*/
-/*        font-size: 10px!important;*/
-/*        height: 40px!important;*/
+    button{
+        margin: 5px;
+        font-size: 10px!important;
+        height: 40px!important;
+        width: 69px!important;
 
-/*    }*/
-/*    #pokeball{*/
-/*        width: 40px !important;*/
-/*        position: relative;*/
-/*        top: 8px;*/
-/*        margin: 5px;*/
-/*    }*/
-/*    form{*/
-/*        font-size: 10px !important;*/
-/*        display: flex !important;*/
-/*    }*/
-/*    input{*/
-/*        width: 200px!important;*/
-/*        font-size: 12px!important;*/
-/*        position: relative;*/
-/*        top: 3px;*/
-/*        margin-right: 10px;*/
-/*        height: 22px!important;*/
-/*    }*/
-/*    .back{*/
-/*        width: 100px!important;*/
-/*    }*/
 
-/*    #submit {*/
-/*        cursor: pointer;*/
-/*        overflow: hidden;*/
-/*        white-space: nowrap;*/
-/*        width: 69px!important;*/
-/*    }*/
+    }
+    #reset:before{
+        content: '\f002'; /* Unicode for a search icon (you may need to adjust this) */
+        font-family: FontAwesome, ui-serif; /* You can use a custom icon font or a different font here */
+        font-size: 15px; /* Adjust the icon size as needed */
+    }
+    #reset span{
+        display: none;
+    }
+    #pokeball{
+        width: 40px !important;
+        position: relative;
+        top: 8px;
+        margin: 5px;
+    }
+    form{
+        font-size: 10px !important;
+        display: flex !important;
+    }
+    input{
+        width: 200px!important;
+        font-size: 12px!important;
+        position: relative;
+        top: 3px;
+        margin-right: 10px;
+        height: 22px!important;
+    }
+    .back{
+        width: 100px!important;
+    }
 
-/*    #submit::before {*/
-/*        content: '\f002'; !* Unicode for a search icon (you may need to adjust this) *!*/
-/*        font-family: FontAwesome, ui-serif; !* You can use a custom icon font or a different font here *!*/
-/*        font-size: 15px; !* Adjust the icon size as needed *!*/
+    #submit {
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
-/*    }*/
+    #submit::before {
+        content: '\f002'; /* Unicode for a search icon (you may need to adjust this) */
+        font-family: FontAwesome, ui-serif; /* You can use a custom icon font or a different font here */
+        font-size: 15px; /* Adjust the icon size as needed */
 
-/*    #submit span {*/
-/*        display: none; !* Hide the button text *!*/
-/*    }*/
+    }
+    #reset::before {
+        content: '\f00d'; /* Unicode for a search icon (you may need to adjust this) */
+        font-family: FontAwesome, ui-serif; /* You can use a custom icon font or a different font here */
+        font-size: 15px; /* Adjust the icon size as needed */
 
-/*    #pokemonInfo{*/
-/*        margin: 0!important;*/
-/*        margin-top: 5rem!important;*/
-/*        display: flex!important;*/
-/*        justify-content: center!important;*/
-/*        align-items: center;*/
+    }
 
-/*    }*/
-/*    .pokeDiv {*/
-/*        padding: 0 ;*/
-/*        font-size: 12px;*/
-/*        display: flex!important;*/
-/*        width: 22rem!important;*/
-/*    }*/
-/*    .sprite{*/
-/*        width: 80px !important;*/
-/*    }*/
+    #submit span {
+        display: none; /* Hide the button text */
+    }
 
-/*}*/
+    #pokemonInfo{
+        margin: 0!important;
+        margin-top: 5rem!important;
+        display: flex!important;
+        justify-content: center!important;
+        align-items: center;
+
+    }
+    .pokeDiv {
+        padding: 0 ;
+        font-size: 12px;
+        display: flex!important;
+        width: 22rem!important;
+    }
+    .sprite{
+        width: 80px !important;
+    }
+
+}
 
 
 
@@ -441,7 +455,7 @@ h3{
 
 
 button {
-    padding: 12.5px 30px;
+    padding: 12px 30px;
     border: 0;
     border-radius: 10px;
     background-color: #131313;
@@ -479,6 +493,6 @@ input {
 input:hover,
 input:focus {
     border: 2px solid #4A9DEC;
-    box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+    box-shadow: 0 0 0 7px rgb(74, 157, 236, 20%);
     background-color: white;
 }
