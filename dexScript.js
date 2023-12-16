@@ -104,3 +104,9 @@ async function showAll() {
     displayPokemonData(pokemonData);
 }
 
+function toggleMenu() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    hamburgerMenu.classList.toggle('active');
+}
+
+

@@ -16,6 +16,7 @@
 <div id="main">
     <script src="dexScript.js"></script>
     <div id="form-ball">
+
         <h1>Pokedex</h1>
         <img id="pokeball" src="assets/pokeball_528101.png">
         <label>
@@ -24,8 +25,14 @@
                 <button class="btn" id="submit" type="submit"><span>Submit</span></button>
             </form>
         </label>
-        <button id="showAll" onclick="showAll()" >Show All</button>
-        <button id="reset" onclick="window.location.reload()" ><span>Clear</span></button>
+
+        <div id="hamburger-menu">
+            <div id="hamburger-icon" onclick="toggleMenu()"></div>
+            <button id="showAll" onclick="showAll()">Show All</button>
+            <button id="reset" onclick="window.location.reload()"><span>Clear</span></button>
+        </div>
+<!--        <button id="showAll" onclick="showAll()" >Show All</button>-->
+<!--        <button id="reset" onclick="window.location.reload()" ><span>Clear</span></button>-->
 
 
     </div>

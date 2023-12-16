@@ -7,6 +7,9 @@
     }
 }
 @media screen and (max-width: 900px) {
+    #main{
+        display: flex;
+    }
     #form-ball {
         width: 89vw!important;
         height: 20px !important;
@@ -104,6 +107,35 @@
     }
     .sprite{
         width: 80px !important;
+    }
+
+
+    #showAll, #reset {
+        display: none; /* Hide the buttons initially */
+    }
+
+    #hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 2rem;
+    }
+
+    #hamburger-icon::before {
+        content: '\2630'; /* Unicode for hamburger icon */
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    #hamburger-menu.active #showAll,
+    #hamburger-menu.active #reset {
+        display: block; /* Show the buttons when the menu is active */
+    }
+
+    #showAll,
+    #reset {
+        width: 150px; /* Set a fixed width for the buttons */
+        margin: 5px; /* Add margin for spacing between buttons */
     }
 
 }
@@ -496,3 +528,21 @@ input:focus {
     box-shadow: 0 0 0 7px rgb(74, 157, 236, 20%);
     background-color: white;
 }
+
+#pokeDiv:hover {
+    border-color: rgba(74, 157, 236, 0.34); /* Change the border color on hover */
+    box-shadow: 0 0 15px rgba(74, 157, 236, 0.5); /* Add a box shadow on hover */
+    transform: scale(1.05); /* Scale up the card on hover */
+    transition: ease-in-out 0.25s;
+}
+
+.sprite:hover {
+    transform: scale(1.1); /* Scale up the sprite on hover */
+    transition: ease-in-out 0.25s;
+}
+#hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
