@@ -11,7 +11,7 @@
         display: flex;
     }
     #form-ball {
-        width: 89vw!important;
+        width: 85% !important;
         height: 20px !important;
         position: fixed !important;
         top: 30px!important;
@@ -274,7 +274,7 @@ button:hover{
 .pokedex-container {
     padding: 40px 90px;
     margin: 0 auto;
-    background-color: ghostwhite;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
