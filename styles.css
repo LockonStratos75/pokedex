@@ -1,3 +1,6 @@
+body{
+    transition: smooth;
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -191,7 +194,7 @@ margin: 15px;
 
 
 #form-ball {
-    max-height: 500px;
+    /*max-height: 500px;*/
     width: 200px;
     position: fixed;
     top: 50%;
@@ -545,4 +548,9 @@ input:focus {
     flex-direction: column;
     align-items: center;
 }
+
+.hidden-buttons {
+    display: none;
+}
+
 

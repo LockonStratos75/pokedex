@@ -28,11 +28,24 @@
 
         <div id="hamburger-menu">
             <div id="hamburger-icon" onclick="toggleMenu()"></div>
-            <button id="showAll" onclick="showAll()">Show All</button>
+            <button class="btn" id="showAll"  onclick="showAll()">Show All</button>
+
+            <h3 class="hidden-buttons">Filter by</h3>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-i')">Kanto</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-ii')">Johto</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-iii')">Hoenn</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-iv')">Sinnoh</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-v')">Unova</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-vi')">Kalos</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-vii')">Alola</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-viii')">Galar</button>
+            <button class="hidden-buttons" onclick="filterByRegion('generation-ix')">Paldea</button>
+            <br>
             <button id="reset" onclick="window.location.reload()"><span>Clear</span></button>
         </div>
-<!--        <button id="showAll" onclick="showAll()" >Show All</button>-->
-<!--        <button id="reset" onclick="window.location.reload()" ><span>Clear</span></button>-->
+
+
+
 
 
     </div>

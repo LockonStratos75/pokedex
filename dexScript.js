@@ -21,6 +21,11 @@ async function fetchPoke(name) {
         const res = await fetch(url);
         const data = await res.json();
 
+        // Fetch Pokemon details by name to get the region information
+        const detailsRes = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${name}`);
+        const detailsData = await detailsRes.json();
+
+
         const pokemon = {
             name: data.name,
             entry: data.id,
@@ -29,9 +34,10 @@ async function fetchPoke(name) {
             frontSprite: data.sprites['front_default'],
             backSprite: data.sprites['back_default'],
             type: new Set(data.types.map(type => type.type.name)),
+            region: detailsData.generation.name, // Extracting region information
         };
 
-        console.log(pokemon);
+        // console.log(pokemon);
         pokemonArray.push(pokemon); // Add the Pokemon object to the array
         displayPokemonInfo(pokemon);
     } catch (error) {
@@ -74,6 +80,10 @@ function displayPokemonInfo(pokemon) {
     weightElement.textContent = `${pokemon.weight} kg`;
     pokemonDiv.appendChild(weightElement);
 
+    const regionElement = document.createElement('p');
+    regionElement.textContent = `Region: ${pokemon.region}`;
+    pokemonDiv.appendChild(regionElement);
+
     pokemonInfoContainer.appendChild(pokemonDiv);
 
     pokemonDiv.addEventListener('click', function () {
@@ -86,8 +96,20 @@ function clickDiv(pokemon) {
     window.location.href = `details.html?pokemon=${pokeName}`;
 }
 
+function createFilterButtons() {
+    // Get all buttons with the class 'hidden-buttons'
+    const hiddenButtons = document.querySelectorAll('.hidden-buttons');
+    const otherElements = document.querySelectorAll('.btn, input');
+
+    // Remove the 'hidden-buttons' class from each button
+    hiddenButtons.forEach(button => button.classList.remove('hidden-buttons'));
+    otherElements.forEach(button => button.classList.add('hidden-buttons'));
+}
+
+
 
 async function showAll() {
+    createFilterButtons();
     clear1('pokemonInfo');
     const pokemonData = [];
 
@@ -99,14 +121,27 @@ async function showAll() {
     // Now, pokemonData contains the data for all Pokémon in the correct order.
     console.log("All Pokemon data loaded successfully!");
 
+
     // You can display the data or perform other operations here.
     // For example, if you want to display the data:
-    displayPokemonData(pokemonData);
+    displayPokemonInfo(pokemonData);
 }
 
 function toggleMenu() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
     hamburgerMenu.classList.toggle('active');
 }
+
+
+function filterByRegion(generation) {
+    clear1('pokemonInfo');
+    const filteredPokemon = pokemonArray.filter(pokemon => pokemon.region.toLowerCase() === generation.toLowerCase());
+    filteredPokemon.forEach(displayPokemonInfo);
+}
+
+
+
+
+
 
 
