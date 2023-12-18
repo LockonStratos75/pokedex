@@ -554,3 +554,31 @@ input:focus {
 }
 
 
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#loader {
+    background-image: url('assets/pokeball_528101.png'); /* Replace with the path to your Pokéball image */
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    margin-top: -40px; /* Half of the height */
+    margin-left: -40px; /* Half of the width */
+    display: none;
+}
+
+
+
+

@@ -42,7 +42,6 @@ async function fetchPoke(name) {
         displayPokemonInfo(pokemon);
     } catch (error) {
         console.error('Error:', error);
-        displayErrorMessage();
     }
 }
 
@@ -55,7 +54,7 @@ function displayPokemonInfo(pokemon) {
 
     const sprite = document.createElement("img");
     sprite.classList.add('sprite');
-    sprite.src = `https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`; // HD
+        sprite.src = `https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`; // HD
     pokemonDiv.appendChild(sprite);
 
     const entryElement = document.createElement('p');
@@ -80,10 +79,10 @@ function displayPokemonInfo(pokemon) {
     weightElement.textContent = `${pokemon.weight} kg`;
     pokemonDiv.appendChild(weightElement);
 
-    const regionElement = document.createElement('p');
-    regionElement.textContent = `Region: ${pokemon.region}`;
-    pokemonDiv.appendChild(regionElement);
-
+    // const regionElement = document.createElement('p');
+    // regionElement.textContent = `Region: ${pokemon.region}`;
+    // pokemonDiv.appendChild(regionElement);
+    //
     pokemonInfoContainer.appendChild(pokemonDiv);
 
     pokemonDiv.addEventListener('click', function () {
@@ -111,21 +110,32 @@ function createFilterButtons() {
 async function showAll() {
     createFilterButtons();
     clear1('pokemonInfo');
-    const pokemonData = [];
 
-    for (let i = 1; i <= 1008; i++) {
-        const data = await fetchPoke(i);
-        pokemonData.push(data);
+    // Display loader
+    const loader = document.getElementById('loader');
+    loader.style.display = 'block';
+
+    const requests = Array.from({ length: 1016 }, (_, i) => fetchPoke(i + 1));
+
+    try {
+        const pokemonData = await Promise.all(requests);
+
+        // Now, pokemonData contains the data for all Pokémon in the correct order.
+        console.log("All Pokemon data loaded successfully!");
+
+        // Hide loader
+        loader.style.display = 'none';
+
+        // Display the data or perform other operations here.
+        displayPokemonInfo(pokemonData);
+    } catch (error) {
+        console.error("Error loading Pokémon data:", error);
+        // Hide loader in case of an error
+        loader.style.display = 'none';
     }
-
-    // Now, pokemonData contains the data for all Pokémon in the correct order.
-    console.log("All Pokemon data loaded successfully!");
-
-
-    // You can display the data or perform other operations here.
-    // For example, if you want to display the data:
-    displayPokemonInfo(pokemonData);
 }
+
+
 
 function toggleMenu() {
     const hamburgerMenu = document.getElementById('hamburger-menu');
